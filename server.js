@@ -7,11 +7,6 @@ const PORT = process.env.PORT || 3000;
 
 const GITHUB_API_URL = 'https://api.github.com';
 
-/**
- * @route   GET /api/usuario/:username
- * @desc    Busca o perfil de um usuário no GitHub.
- * @access  Público
- */
 app.get('/api/usuario/:username', async (req, res) => {
   try {
     const { username } = req.params;
@@ -27,11 +22,6 @@ app.get('/api/usuario/:username', async (req, res) => {
   }
 });
 
-/**
- * @route   GET /api/repos/:username
- * @desc    Busca os repositórios públicos de um usuário no GitHub.
- * @access  Público
- */
 app.get('/api/repos/:username', async (req, res) => {
   try {
     const { username } = req.params;
